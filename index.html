@@ -1,0 +1,301 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entreprise de Services Numériques à Rennes - Code with us</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          'poppins': ['poppins']
+        },
+        extend: {
+          colors: {
+            'code-dark-blue': '#20378A',
+            'code-blue': '#374d9d',
+            'code-grey': '#ededed'
+          }
+        },
+        container: {
+            screens: {
+                'sm': '640px',
+                'md': '768px',
+                'lg': '1024px',
+                'xl': '1024px',
+            }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="animations.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+  
+</head>
+<body class="font-poppins">
+
+  <div class="bg-code-dark-blue text-white py-3 hidden lg:block">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-5 place-items-center">
+        <div class="col">Code with us</div>
+        <div class="col text-sm">
+          <a class="cursor-pointer" onclick="scrollToElement('valeurs')">Valeurs</a>
+        </div>
+        <div class="col text-sm">
+          <a class="cursor-pointer" onclick="scrollToElement('competences')">Expertise</a>
+        </div>
+        <div class="col text-sm">
+          <a class="cursor-pointer" onclick="scrollToElement('realisations')">Réalisations</a>
+        </div>
+        <div class="col text-sm">
+          <a class="cursor-pointer" onclick="scrollToElement('recrutement')">Recrutement</a>
+        </div>
+      </div>
+    </div>    
+  </div>
+
+  <header class="bg-code-blue text-white py-5">
+    <div class="container mx-auto px-10 lg:px-0">
+      <div class="grid grid-cols-5 place-items-center">
+        <div class="col">
+          <a href="https://www.codewithus.fr">
+            <img src="images/code-with-us-blanc.png" alt="Logo Wode with us" width="150" />
+          </a>
+        </div>
+        <div class="col-span-3 mx-auto text-center">
+          <h1 class="text-3xl lg:text-4xl font-extrabold py-2">Code with us</h1>
+          <h2 class="text-2xl lg:text-3xl font-bold">Par les devs, pour les devs</h2>
+        </div>
+      </div>
+      
+    </div>
+  </header>
+
+  <div class="bg-code-grey text-black pt-5 pb-10" id="presentation">
+    <div class="container mx-auto px-10 lg:px-0 animate">
+      <h1 class="text-4xl font-extrabold mt-7 mb-16 text-code-blue animate-1">Qui sommes-nous ?</h1>
+      <div class="grid grid-cols-1 place-items-center mb-10 animate-1">
+        <div class="col">
+          <p class="text-justify">
+            <i>Code with us</i>, c'est la rencontre de 3 développeurs partageant le même état d'esprit : "coder est notre passion". Nous aimons résoudre les problèmes informatiques et la satisfaction de nos clients est notre priorité.
+          </p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-3 place-items-center">
+        <div class="col text-center mb-10">
+          <img class="rounded-full" src="images/photos/alan.png" width="190" title="Photo Alan" />
+          <div class="text-md font-bold py-5">Alan Menant</div>
+          <div class="flex flex-row justify-center">
+            <div class="mx-2">
+              <a href="https://www.linkedin.com/in/alanmenant/"><img src="images/icons/logo-linkedin.png" width="20" /></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col text-center mb-10">
+          <img class="rounded-full" src="images/photos/maxime.png" width="190" title="Photo Maxime" />
+          <div class="text-md font-bold py-5">Maxime Odye</div>
+          <div class="flex flex-row justify-center">
+            <div class="mx-2">
+              <a href="https://www.linkedin.com/in/maxime-odye-81a55215b/"><img src="images/icons/logo-linkedin.png" width="20" /></a>
+            </div>
+            <div class="mx-2">
+              <a href="https://twitter.com/MaxOdye"><img src="images/icons/logo-twitter.png" width="20" /></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col text-center mb-10">
+          <img class="rounded-full" src="images/photos/mickael.png" width="190" title="Photo Mickaël" />
+          <div class="text-md font-bold py-5">Mickaël Barroux</div>
+          <div class="flex flex-row justify-center">
+            <div class="mx-2">
+              <a href="https://www.linkedin.com/in/mbarroux/"><img src="images/icons/logo-linkedin.png" width="20" /></a>
+            </div>
+            <div class="mx-2">
+              <a href="https://twitter.com/mbarroux"><img src="images/icons/logo-twitter.png" width="20" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-code-blue text-white pt-5 pb-10" id="valeurs">
+    <div class="container mx-auto px-10 lg:px-0 animate">
+      <h1 class="text-4xl font-extrabold mt-7 mb-16 text-white animate-1">Nos valeurs</h1>
+
+      <div class="grid grid-cols-2 lg:grid-cols-3 place-items-left items-center mb-20 animate-1">
+        <div class="col hidden lg:block">
+          <img src="images/photos/expert.jpg" width="280" />
+        </div>
+        <div class="col-span-2">
+          <p class="text-justify font-bold mb-2">Expertise</p>
+          <p class="text-justify">
+            Notre engagement est de toujours produire du code simple, robuste et testé. De part nos nombreuses missions, nous avons acquis une solide expérience en développement logiciel. Déployer en production n'est jamais une crainte, même le vendredi.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 lg:grid-cols-3 place-items-left items-center mb-20 animate-2">
+        <div class="col-span-2">
+          <p class="text-justify font-bold mb-2">Transparence</p>
+          <p class="text-justify">
+            Chez <i>Code with us</i>, il n'y a pas de supérieur hiérarchique, manager ou commercial, nous sommes tous développeurs. En tant que pair, vous avez accès à toute l'information de l'entreprise.
+          </p>
+        </div>
+        <div class="col hidden lg:block">
+          <img class="ml-14" src="images/photos/transparence.jpg" width="280" />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 lg:grid-cols-3 place-items-left items-center mb-10 animate-3">
+        <div class="col hidden lg:block">
+          <img src="images/photos/share.jpg" width="280" />
+        </div>
+        <div class="col-span-2">
+          <p class="text-justify font-bold mb-2">Partage</p>
+          <p class="text-justify">
+            Nous adorons partager nos expériences et découvertes ainsi que travailler ensemble, en pair ou en mob. Nous nous rendons régulièrement aux meetups ou conférences, en tant que participant, conférencier, organisateur ou bien bénévole ! Chez <i>Code with us</i>, vous trouverez ou serez vous-même le mentor de quelqu'un d'autre.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="bg-code-grey text-black pt-5 pb-10" id="competences">
+    <div class="container mx-auto px-10 lg:px-0 animate">
+      <h1 class="text-4xl font-extrabold mt-7 mb-16 text-code-blue animate-1">Nos compétences</h1>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 place-items-center text-center animate-1">
+        <div class="col mb-10">
+          <p class="font-bold mb-2">Architecture logicielle</p>
+          <ul>
+            <li>Modélisation de base de données</li>
+            <li>Microservices</li>
+            <li>API Rest</li>
+          </ul>
+        </div>
+
+        <div class="col mb-10">
+          <p class="font-bold mb-2">Software craftsmanship</p>
+          <ul>
+            <li>Bonnes pratiques de développement</li>
+            <li>Qualité</li>
+            <li>Tests</li>
+            <li>Scalabilité</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 place-items-center text-center animate-2">
+        <div class="col mb-10">
+          <p class="font-bold mb-2">Déploiement</p>
+          <ul>
+            <li>Docker</li>
+            <li>Kubernetes</li>
+            <li>GCP</li>
+            <li>Gitlab</li>
+          </ul>
+        </div>
+
+        <div class="col mb-10">
+          <p class="font-bold mb-2">Data</p>
+          <ul>
+            <li>PostgresSQL</li>
+            <li>MongoDB</li>
+            <li>RabbitMQ</li>
+            <li>Elastic</li>
+          </ul>
+        </div>
+
+        <div class="col mb-10">
+          <p class="font-bold mb-2">Technos</p>
+          <ul>
+            <li>Java</li>
+            <li>Kotlin</li>
+            <li>Spring</li>
+            <li>Quarkus</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="bg-code-blue text-white pt-5 pb-10" id="realisations">
+    <div class="container mx-auto px-10 lg:px-0 animate">
+      <h1 class="text-4xl font-extrabold mt-7 mb-16 text-white animate-1">Quelques réalisations</h1>
+
+      <div class="grid grid-cols-3 lg:grid-cols-4 place-items-center mb-20 animate-1">
+        <div class="col hidden lg:block">
+          <img src="images/logos/redmart200x200.png" width="150" alt="Logo Redmart" />
+        </div>
+        <div class="col-span-3">
+          <p class="text-justify font-bold mb-2">Redmart</p>
+          <p class="text-justify">
+            Redmart, avant son rachat par Lazada (Alibaba), était le leader de la livraison de courses à domicile à Singapour.<br/>
+            Développements sur le moteur de recherche (Elasticsearch) : recommandations de produits, amélioration de la pertinence des résultats basée sur la popularité des articles, migration ES 1 vers 5 sans downtime (release en dark launch).
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 lg:grid-cols-4 place-items-center mb-20 animate-2">
+        <div class="col hidden lg:block">
+          <img src="images/logos/biomerieux200x200.png" width="150" alt="Logo biomérieux" />
+        </div>
+        <div class="col-span-3">
+          <p class="text-justify font-bold mb-2">Biomérieux</p>
+          <p class="text-justify">
+            Membre d'une équipe auto-organisée développant une plateforme de food safety. L'objectif étant l'exécution d'algorithmes de data-science et l'affichage de leurs résultats à des fins analytiques. <br/>
+            Implication de la compréhension du besoin et développement des fonctionnalités à leur déploiement. <br/>
+            Mise en place de l'industrialisation et de l'automatisation des processus (CI/CD, DevOps) pour le déploiement et les tests de bout en bout en conditions réelles.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 lg:grid-cols-4 place-items-center mb-10 animate-3">
+        <div class="col hidden lg:block">
+          <img src="images/logos/ouestfrance200x200.png" width="150" alt="Logo Ouest-France" />
+        </div>
+        <div class="col-span-3">
+          <p class="text-justify font-bold mb-2">Ouest-France</p>
+          <p class="text-justify">
+            Développement des micro-services en charge de fournir les données des articles sur le site éditorial Ouest-France ainsi que de la configuration des pages sur la plateforme, avec comme contraintes une forte volumétrie, un trafic grand public important et des mises en production sans interruption.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-code-grey text-black pt-5 pb-20" id="recrutement">
+    <div class="container mx-auto px-10 lg:px-0 animate">
+      <h1 class="text-4xl font-extrabold mt-7 mb-16 text-code-blue animate-1">Rejoignez-nous</h1>
+      <div class="grid grid-cols-2 lg:grid-cols-3 place-items-left items-center animate-1">
+        <div class="col hidden lg:block">
+          <img src="images/photos/join-us.jpg" width="280" />
+        </div>
+        <div class="col-span-2">
+          <p class="text-justify">
+            Envie de travailler dans un environnement stimulant, entouré d'experts et sur des missions intéressantes ? <i>Code with us</i>, c'est la garantie de travailler avec des personnes qui partagent votre passion pour le développement.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-code-blue text-white pt-5 pb-5">
+    <div class="container mx-auto text-center text-xs">
+      <p class="my-1">contact@codewithus.fr</p>
+      <p class="my-1">Copyright © 2023 Code with us - Tous droits réservés.</p>
+      <p class="my-1"><a href="mentions-legales.html">Mentions légales</a></p>
+    </div>
+  </footer>
+  
+  <script type="text/javascript" src="index.js"></script>  
+</body>
+</html>

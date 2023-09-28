@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entreprise de Services Numériques à Rennes - Code with us</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          'poppins': ['poppins']
+        },
+        extend: {
+          colors: {
+            'code-dark-blue': '#20378A',
+            'code-blue': '#374d9d',
+            'code-grey': '#ededed'
+          }
+        },
+        container: {
+            screens: {
+                'sm': '640px',
+                'md': '768px',
+                'lg': '1024px',
+                'xl': '1024px',
+            }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="animations.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+  
+</head>
+<body class="font-poppins bg-code-grey">
+
+
+  <div class="flex flex-col h-screen">
+    <header class="bg-code-blue text-white py-5">
+      <div class="container mx-auto px-10 lg:px-0">
+        <div class="grid grid-cols-5 place-items-center">
+          <div class="col">
+            <a href="https://www.codewithus.fr">
+              <img src="images/code-with-us-blanc.png" alt="Logo Wode with us" width="150" />
+            </a>
+          </div>
+          <div class="col-span-3 mx-auto text-center">
+            <h1 class="text-3xl lg:text-4xl font-extrabold py-2">Code with us</h1>
+            <h2 class="text-2xl lg:text-3xl font-bold">Par les devs, pour les devs</h2>
+          </div>
+        </div>
+      </div>
+    </header>
+  
+    <div class="mb-auto text-black pt-5 pb-10">
+      <div class="container mx-auto px-10 lg:px-0 animate">
+        <h1 class="text-4xl font-extrabold mt-7 mb-5 text-code-blue animate-1">Mentions légales</h1>
+        <div class="grid grid-cols-1 mb-20 animate-1">
+          <div class="col">
+            <p><i>Code with us</i>, Société par Actions Simplifiée au capital de 30 000 €</p>
+            <p>4 rue des Genëts 35650 LE RHEU, contact@codewithus.fr</p>
+            <p>R.C.S. Rennes - 979 895 216</p>
+            <p>Numéro de TVA intracommunaitaire : FR71979895216</p>
+            <p>Directeur de la publication : Alan Menant alan.menant@codewithus.fr</p>
+            <p>Hébergement : Github Inc. - 88 Colin P Kelly Jr St San Francisco California 94107</p>
+          </div>
+        </div>
+
+        <h1 class="text-4xl font-extrabold mt-7 mb-5 text-code-blue animate-1">Propriété intellectuelle</h1>
+        <div class="grid grid-cols-1 mb-10 animate-1">
+          <div class="col">
+            <p>Les photos et textes sont la propriété exclusive de <i>Code with us</i>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <footer class="bg-code-blue text-white pt-5 pb-5">
+      <div class="container mx-auto text-center text-xs">
+        <p class="my-1">contact@codewithus.fr</p>
+        <p class="my-1">Copyright © 2023 Code with us - Tous droits réservés.</p>
+      </div>
+    </footer>
+  </div>
+  
+  
+  <script type="text/javascript" src="index.js"></script>  
+</body>
+</html>
