@@ -1,0 +1,74 @@
+---
+// src/components/Header.astro
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<header class="bg-white border-b border-slate-100 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <!-- Zone Logo à la place de l'ancien texte et des </> -->
+        <a href="/" class="flex items-center gap-3 group transition-transform duration-200">
+            <img
+                    src="/website/images/logo.svg"
+                    alt="Code With Us Logo"
+                    class="w-12 h-12 object-contain"
+            />
+            <!-- Optionnel : Vous pouvez masquer le texte sur mobile et le laisser sur desktop si besoin -->
+            <div class="flex flex-col justify-center select-none text-center">
+                <span class="font-black text-xl text-esn-blue tracking-wider leading-none">
+                  CODE
+                </span>
+                <span class="font-bold text-xs text-esn-blue tracking-widest leading-none -mt-0.5">
+                  WITH US
+                </span>
+            </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+            <a href={`${baseUrl}/#approche`} class="hover:text-esn-blue transition-colors duration-150 relative py-1 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-esn-blue-dark after:origin-bottom-right after:transition-transform after:duration-200 hover:after:scale-x-100 hover:after:origin-bottom-left">Notre approche</a>
+            <a href={`${baseUrl}/#expertises`} class="hover:text-esn-blue transition-colors duration-150 relative py-1 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-esn-blue-dark after:origin-bottom-right after:transition-transform after:duration-200 hover:after:scale-x-100 hover:after:origin-bottom-left">Expertises</a>
+            <a href={`${baseUrl}/#realisations`} class="hover:text-esn-blue transition-colors duration-150 relative py-1 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-esn-blue-dark after:origin-bottom-right after:transition-transform after:duration-200 hover:after:scale-x-100 hover:after:origin-bottom-left">Réalisations</a>
+            <a href={`${baseUrl}/#talks`} class="hover:text-esn-blue transition-colors duration-150 relative py-1 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-esn-blue-dark after:origin-bottom-right after:transition-transform after:duration-200 hover:after:scale-x-100 hover:after:origin-bottom-left">Talks</a>
+            <a href={`${baseUrl}/equipe`} class="hover:text-esn-blue transition-colors duration-150 relative py-1 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-esn-blue-dark after:origin-bottom-right after:transition-transform after:duration-200 hover:after:scale-x-100 hover:after:origin-bottom-left">L'équipe</a>
+        </nav>
+
+        <div class="hidden md:block">
+            <a href="mailto:contact@codewithus.fr" class="bg-esn-blue-dark text-white px-5 py-2.5 rounded-lg font-medium text-sm hover:bg-esn-blue transition">
+                Parlons de votre projet
+            </a>
+        </div>
+
+        <button id="mobile-menu-btn" class="md:hidden text-slate-700 focus:outline-none p-2" aria-label="Menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-1 shadow-lg">
+        <a href={`${baseUrl}/#approche`} class="block text-slate-700 font-medium py-2.5 px-3 rounded-lg hover:bg-slate-50 hover:text-esn-blue transition">Notre approche</a>
+        <a href={`${baseUrl}/#expertises`} class="block text-slate-700 font-medium py-2.5 px-3 rounded-lg hover:bg-slate-50 hover:text-esn-blue transition">Expertises</a>
+        <a href={`${baseUrl}/#realisations`} class="block text-slate-700 font-medium py-2.5 px-3 rounded-lg hover:bg-slate-50 hover:text-esn-blue transition">Réalisations</a>
+        <a href={`${baseUrl}/#talks`} class="block text-slate-700 font-medium py-2.5 px-3 rounded-lg hover:bg-slate-50 hover:text-esn-blue transition">Talks</a>
+        <a href={`${baseUrl}/equipe`} class="block text-slate-700 font-medium py-2.5 px-3 rounded-lg hover:bg-slate-50 hover:text-esn-blue transition">L'équipe</a>
+
+        <div class="pt-2 px-3">
+            <a href="mailto:contact@codewithus.fr" class="block bg-esn-blue text-white text-center py-2.5 rounded-lg font-semibold hover:bg-esn-blue-dark transition shadow-sm">
+                Parlons de votre projet
+            </a>
+        </div>
+    </div>
+</header>
+
+<script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn?.addEventListener('click', () => {
+        menu?.classList.toggle('hidden');
+    });
+
+    const links = menu?.querySelectorAll('a');
+    links?.forEach(link => {
+        link.addEventListener('click', () => {
+            menu?.classList.add('hidden');
+        });
+    });
+</script>

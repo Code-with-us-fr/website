@@ -1,0 +1,100 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import talks from '../data/talks.json';
+
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+// Fonction pour extraire l'ID YouTube afin de générer l'URL de la miniature
+function getYouTubeId(url) {
+    if (!url) return null;
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?\s*v=|\&v=)([^#\&\?]*).*/;
+    const match = url.match(regExp);
+    return (match && match[2].length === 11) ? match[2] : null;
+}
+---
+
+<Layout title="Tous nos Talks - Code with us">
+    <Header />
+
+    <main class="bg-slate-50 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6">
+            <nav class="text-xs font-medium text-slate-400 mb-4">
+                <a href={`${baseUrl}/`} class="hover:text-esn-blue transition">Accueil</a>
+                <span class="mx-2">/</span>
+                <span class="text-slate-600">Talks</span>
+            </nav>
+
+            <div class="max-w-none">
+                <p class="text-xs font-bold uppercase tracking-wider text-esn-blue mb-2">PARTAGE & TRANSMISSION</p>
+                <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
+                    Nos conférences et retours d'expérience
+                </h1>
+                <p class="text-slate-600 text-base leading-relaxed">
+                    Parce que la passion du code passe aussi par le partage, nous intervenons régulièrement lors de conférences majeures et de meetups pour transmettre nos retours d'expérience du terrain.
+                </p>
+            </div>
+        </div>
+
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {talks.map((talk) => {
+                    const videoId = getYouTubeId(talk.youtubeUrl);
+                    // On privilégie la miniature YouTube. talk.image reste là en sécurité (fallback)
+                    const thumbnailUrl = videoId
+                        ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
+                        : talk.image;
+
+                    return (
+                            <a
+                                    href={talk.youtubeUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="bg-white rounded-xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md hover:border-slate-200 transition-all duration-200 flex flex-col h-full group"
+                            >
+                                {/* Conteneur image / vidéo */}
+                                <div class="h-48 overflow-hidden relative shrink-0 bg-slate-100">
+                                    <Image
+                                            src={thumbnailUrl}
+                                            alt={talk.title}
+                                            width={480}
+                                            height={270}
+                                            class="w-full h-full object-cover group-hover:scale-102 transition duration-300"
+                                    />
+                                    <div class="absolute bottom-3 left-3 bg-black/70 text-white text-xs px-2.5 py-1 rounded backdrop-blur-sm font-medium">
+                                        ▶ Replay disponible
+                                    </div>
+                                </div>
+
+                                {/* Contenu textuel */}
+                                <div class="p-6 flex flex-col justify-between flex-grow space-y-4">
+                                    <div class="space-y-2">
+                                    <span class="inline-block text-[11px] font-semibold tracking-wide uppercase px-2 py-0.5 bg-slate-100 text-esn-blue rounded">
+                                      {talk.event}
+                                    </span>
+                                        <h2 class="font-bold text-slate-900 text-lg group-hover:text-esn-blue transition-colors duration-150 line-clamp-2">
+                                            {talk.title}
+                                        </h2>
+                                        <p class="text-sm text-slate-500 leading-relaxed line-clamp-3">
+                                            {talk.description}
+                                        </p>
+                                    </div>
+
+                                    {/* Indicateur d'action stylisé au survol de la carte */}
+                                    <div class="pt-2">
+                                    <span class="inline-flex items-center gap-2 text-sm font-semibold text-esn-blue group-hover:text-blue-800 transition-colors">
+                                      Voir la vidéo <span class="text-base transform group-hover:translate-x-0.5 transition-transform">→</span>
+                                    </span>
+                                    </div>
+                                </div>
+                            </a>
+                    );
+                })}
+            </div>
+        </section>
+
+        <CtaBanner />
+    </main>
+</Layout>

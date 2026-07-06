@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Pillars from '../components/Pillars.astro';
+import Expertises from '../components/Expertises.astro';
+import TrustLogos from '../components/TrustLogos.astro';
+import Talks from '../components/Talks.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Code with us - ESN & Conseil Développement">
+	<Header />
+
+	<main class="scroll-smooth"> <!-- Ajout du défilement fluide -->
+		<div id="approche">
+			<Hero />
+			<Pillars />
+		</div>
+
+		<div id="expertises">
+			<Expertises />
+		</div>
+
+
+		<div id="realisations">
+			<TrustLogos />
+		</div>
+
+		<div id="talks">
+			<Talks />
+		</div>
+
+		<CtaBanner />
+	</main>
+</Layout>

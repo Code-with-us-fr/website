@@ -1,0 +1,79 @@
+[
+  {
+    "id": "dev",
+    "title": "Développement (Backend / Frontend)",
+    "techs": "Java, Spring, Kotlin, TypeScript, React, Angular...",
+    "intro": "Nous concevons des applications Web et Mobiles sur-mesure, robustes, performantes et centrées sur l'expérience utilisateur.",
+    "bullets": [
+      "Développement de backends scalables et d'architectures asynchrones.",
+      "Création d'interfaces frontend modernes, réactives et accessibles.",
+      "Garantie d'une base de code évolutive et hautement maintenable."
+    ]
+  },
+  {
+    "id": "api",
+    "title": "API & Intégrations",
+    "techs": "REST, GraphQL, API Platform, Microservices, Event-Driven...",
+    "intro": "Nous construisons des écosystèmes d'API agiles et sécurisés pour interconnecter vos services et fluidifier vos flux de données.",
+    "bullets": [
+      "Conception et modélisation d'API orientées contrat (OpenAPI, GraphQL schema).",
+      "Mise en place de passerelles d'API (API Gateways) et de gestion de trafic.",
+      "Intégration de patterns asynchrones et d'architectures orientées événements."
+    ]
+  },
+  {
+    "id": "arch",
+    "title": "Architecture Logicielle",
+    "techs": "DDD, Hexagonale, CQRS, Event-driven, Clean Architecture...",
+    "intro": "Nous structurons vos applications en appliquant les meilleurs patterns du marché afin d'assurer l'alignement strict du code avec vos règles métier.",
+    "bullets": [
+      "Maîtrise du Domain-Driven Design (DDD) pour dompter la complexité métier.",
+      "Isolation des dépendances techniques via l'architecture hexagonale / clean.",
+      "Séparation des lectures et écritures (CQRS) pour des performances optimales."
+    ]
+  },
+  {
+    "id": "cloud",
+    "title": "Cloud & DevOps",
+    "techs": "AWS, Docker, Kubernetes, GitHub Actions, Terraform...",
+    "intro": "Nous automatisons vos déploiements et orchestrons vos infrastructures Cloud pour garantir une résilience maximale et réduire le Time-to-Market.",
+    "bullets": [
+      "Industrialisation des environnements grâce à l'Infrastructure as Code (IaC).",
+      "Conception de pipelines CI/CD automatisés, fiables et rapides.",
+      "Orchestration et conteneurisation d'applications à haute disponibilité."
+    ]
+  },
+  {
+    "id": "sec",
+    "title": "Sécurité",
+    "techs": "APIs, OAuth2, OpenID Connect, JWT, sécurité des APIs...",
+    "intro": "Nous sécurisons vos plateformes et vos échanges de données dès les premières étapes du cycle de développement (approche DevSecOps).",
+    "bullets": [
+      "Mise en place de protocoles d'authentification et d'autorisation robustes.",
+      "Protection avancée des passerelles d'API et sécurisation des tokens (JWT).",
+      "Sensibilisation et intégration des bonnes pratiques de sécurité (OWASP)."
+    ]
+  },
+  {
+    "id": "ia",
+    "title": "IA & Automatisation",
+    "techs": "Intégration de l'IA au quotidien, LLM, RAG, automatisation, agents...",
+    "intro": "Nous intégrons l'intelligence artificielle de manière pragmatique et concrète pour décupler la productivité de vos équipes et de vos produits.",
+    "bullets": [
+      "Interconnexion et fine-tuning de modèles de langage (LLM) propriétaires ou open-source.",
+      "Implémentation de systèmes de recherche augmentée (RAG) connectés à vos données.",
+      "Création d'agents autonomes et de chaînes d'automatisation intelligentes."
+    ]
+  },
+  {
+    "id": "quality",
+    "title": "Qualité Logicielle",
+    "techs": "Tests automatisés, TDD, revue de code, Sonar, métriques...",
+    "intro": "L'excellence technique fait partie de notre ADN. Nous mettons en place les standards les plus exigeants pour éliminer la dette technique.",
+    "bullets": [
+      "Pratique rigoureuse du Test-Driven Development (TDD) et des tests d'intégration.",
+      "Revues de code systématiques et mise en place de barrières qualité (SonarQube).",
+      "Suivi des métriques clés pour pérenniser l'évolutivité de l'application."
+    ]
+  }
+]

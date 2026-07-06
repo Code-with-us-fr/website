@@ -1,0 +1,8 @@
+[
+  { "name": "Ouest France", "logo": "images/logos/ouestfrance200x200.png" },
+  { "name": "bioMérieux", "logo": "images/logos/biomerieux200x200.png" },
+  { "name": "Redmart", "logo": "images/logos/redmart200x200.png" },
+  { "name": "Sinari", "logo": "images/logos/sinari.svg" },
+  { "name": "Whoz", "logo": "images/logos/whoz.png" },
+  { "name": "GmVet", "logo": "images/logos/gmvet.png" }
+]

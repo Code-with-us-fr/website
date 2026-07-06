@@ -1,0 +1,53 @@
+---
+// src/components/Hero.astro
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<section class="relative bg-gradient-to-r from-blue-50/70 via-white to-transparent overflow-hidden pt-16 pb-24 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-12 gap-12 items-center">
+
+        <div class="md:col-span-6 space-y-6 z-10">
+            <p class="text-xs font-bold uppercase tracking-widest text-esn-blue">
+                ESN • CONSEIL • DÉVELOPPEMENT
+            </p>
+
+            <h1 class="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-[1.2] md:leading-[1.15]">
+                Nous développons <br class="hidden lg:inline"/>des logiciels que nous serions <span class="text-esn-blue font-extrabold">fiers de maintenir.</span>
+            </h1>
+
+            <p class="text-slate-600 text-base md:text-lg leading-relaxed max-w-xl">
+                Petite équipe de développeurs seniors, nous accompagnons des organisations ambitieuses dans la conception et la réalisation de logiciels utiles, robustes et évolutifs.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                <a
+                        href="mailto:contact@codewithus.fr"
+                        class="bg-esn-blue-dark text-white text-center px-6 py-4 rounded-lg font-semibold hover:bg-esn-blue transition shadow-md"
+                >
+                    Parlons de votre projet
+                </a>
+                <a
+                        href="#approche"
+                        class="flex items-center justify-center gap-2 text-esn-blue-dark font-semibold hover:text-esn-blue transition py-3 group"
+                >
+                    Découvrir notre approche <span class="text-xl group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="hidden sm:block md:col-span-6 relative h-[350px] md:h-[450px]">
+            <div class="w-full h-full bg-gradient-to-br from-blue-100 to-indigo-50 border-2 border-dashed border-blue-200 rounded-2xl flex flex-col items-center justify-center p-8 text-center shadow-inner">
+                <div class="bg-esn-blue text-white p-4 rounded-full text-3xl mb-4 shadow-md animate-pulse">
+                    👥
+                </div>
+                <p class="font-bold text-slate-800 text-lg">
+                    Photo de l'équipe <br class="hidden md:inline"/>"Code with us"
+                </p>
+                <p class="text-xs text-slate-400 mt-2 max-w-xs">
+                    Emplacement réservé pour votre photo de 3 personnes en train de travailler (Format recommandé : 800x600px)
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>

@@ -1,0 +1,74 @@
+---
+import expertises from '../data/expertises.json';
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<section id="expertises" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 scroll-mt-24">
+    <div class="flex justify-between items-end mb-10">
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Nos expertises</h2>
+        <a
+                href={`${baseUrl}/expertises`}
+                class="flex items-center justify-center gap-2 text-esn-blue-dark text-sm font-semibold hover:text-esn-blue transition py-3 group"
+        >
+            Voir toutes nos expertises <span class="group-hover:translate-x-1 transition-transform">→</span>
+        </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {expertises.map((exp) => (
+                <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between group cursor-pointer">
+                    <div class="space-y-4">
+                        <div class="text-esn-blue bg-slate-50 group-hover:bg-esn-blue group-hover:text-white transition-colors duration-200 w-12 h-12 flex items-center justify-center rounded-xl">
+                            {exp.id === 'dev' && (
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+                                    </svg>
+                            )}
+                            {exp.id === 'api' && (
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+                                    </svg>
+                            )}
+                            {exp.id === 'arch' && (
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-.738.09-1.454.257-2.138" />
+                                    </svg>
+                            )}
+                            {exp.id === 'cloud' && (
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z" />
+                                    </svg>
+                            )}
+                            {exp.id === 'sec' && (
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                                    </svg>
+                            )}
+                            {exp.id === 'ia' && (
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 21l-.813-5.096L3 15l5.096-.813L9 9l.813 5.187L15 15l-5.187.904zM18 7l-.542 3.458L14 11l3.458.542L18 15l.542-3.458L22 11l-3.458-.542L18 7z" />
+                                    </svg>
+                            )}
+                            {exp.id === 'quality' && (
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                            )}
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-lg group-hover:text-esn-blue transition-colors duration-200">
+                            {exp.title}
+                        </h3>
+                        <p class="text-sm text-slate-500 leading-relaxed">
+                            {exp.desc}
+                        </p>
+                    </div>
+                </div>
+        ))}
+    </div>
+
+    <div class="mt-8 text-center sm:hidden">
+        <a href={`${baseUrl}/expertises`} class="inline-flex items-center gap-1 text-sm font-semibold text-esn-blue hover:underline">
+            Voir toutes nos expertises <span>→</span>
+        </a>
+    </div>
+</section>
