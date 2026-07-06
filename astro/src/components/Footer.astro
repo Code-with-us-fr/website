@@ -1,6 +1,7 @@
 ---
 const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
 const currentYear = new Date().getFullYear();
+const logoUrl = `${baseUrl}/images/logo-blanc.svg`;
 ---
 
 <footer class="bg-slate-900 text-slate-400 border-t border-slate-800 font-sans">
@@ -9,9 +10,16 @@ const currentYear = new Date().getFullYear();
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 mb-12">
             <!-- Colonne 1 : Brand & Pitch -->
             <div class="md:col-span-2 space-y-4">
-                <a href={`${baseUrl}/`} class="text-white font-bold text-lg tracking-tight flex items-center gap-2 group">
-                    <span class="text-esn-blue font-black">&lt;/&gt;</span>
-                    <span>Code with us</span>
+                <a href={`${baseUrl}/`} class="flex items-center gap-3 group transition-transform duration-200 select-none">
+                    <img
+                            src={logoUrl}
+                            alt="Code With Us Logo"
+                            class="w-10 h-10 object-contain shrink-0"
+                    />
+                    <!-- Nom de la marque sur une seule ligne et en plus gros -->
+                    <span class="font-black text-lg text-white tracking-wide leading-none uppercase">
+                        Code with us
+                    </span>
                 </a>
                 <p class="text-sm text-slate-400 max-w-sm leading-relaxed">
                     Par les devs, pour les devs. Entreprise de Services Numériques spécialisée dans la conception de solutions durables et le développement de logiciels d'excellence.

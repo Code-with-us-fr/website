@@ -1,6 +1,9 @@
 ---
 // src/components/Hero.astro
 const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+// Chemin vers l'image dans le dossier public
+const teamImageUrl = `${baseUrl}/images/team2.png`;
 ---
 
 <section class="relative bg-gradient-to-r from-blue-50/70 via-white to-transparent overflow-hidden pt-16 pb-24 md:py-24">
@@ -12,7 +15,7 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
             </p>
 
             <h1 class="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-[1.2] md:leading-[1.15]">
-                Nous développons <br class="hidden lg:inline"/>des logiciels que nous serions <span class="text-esn-blue font-extrabold">fiers de maintenir.</span>
+                Nous développons <br class="hidden lg:inline"/>des logiciels que nous serions <span class="text-[#1e40af] font-extrabold">fiers de maintenir.</span>
             </h1>
 
             <p class="text-slate-600 text-base md:text-lg leading-relaxed max-w-xl">
@@ -22,7 +25,7 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
             <div class="flex flex-col sm:flex-row gap-4 pt-4">
                 <a
                         href="mailto:contact@codewithus.fr"
-                        class="bg-esn-blue-dark text-white text-center px-6 py-4 rounded-lg font-semibold hover:bg-esn-blue transition shadow-md"
+                        class="bg-[#1e40af] text-white text-center px-6 py-4 rounded-lg font-semibold hover:bg-esn-blue-dark transition shadow-md"
                 >
                     Parlons de votre projet
                 </a>
@@ -35,17 +38,16 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
             </div>
         </div>
 
+        {/* Colonne de droite : Image statique depuis le dossier public */}
         <div class="hidden sm:block md:col-span-6 relative h-[350px] md:h-[450px]">
-            <div class="w-full h-full bg-gradient-to-br from-blue-100 to-indigo-50 border-2 border-dashed border-blue-200 rounded-2xl flex flex-col items-center justify-center p-8 text-center shadow-inner">
-                <div class="bg-esn-blue text-white p-4 rounded-full text-3xl mb-4 shadow-md animate-pulse">
-                    👥
-                </div>
-                <p class="font-bold text-slate-800 text-lg">
-                    Photo de l'équipe <br class="hidden md:inline"/>"Code with us"
-                </p>
-                <p class="text-xs text-slate-400 mt-2 max-w-xs">
-                    Emplacement réservé pour votre photo de 3 personnes en train de travailler (Format recommandé : 800x600px)
-                </p>
+            <div class="w-full h-full rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+                <img
+                        src={teamImageUrl}
+                        alt="L'équipe Code with us en pleine session de développement et de conception"
+                        loading="eager"
+                        decoding="async"
+                        class="w-full h-full object-cover transform hover:scale-101 transition duration-500"
+                />
             </div>
         </div>
 
