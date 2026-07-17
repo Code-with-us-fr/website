@@ -1,0 +1,32 @@
+#name: Deploy to GitHub Pages
+#
+#on:
+#  push:
+#    branches: [ feat/website-V2-gemini ]
+#
+#permissions:
+#  contents: read
+#  pages: write
+#  id-token: write
+#
+#jobs:
+#  build:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout your repository
+#        uses: actions/checkout@v4
+#
+#      - name: Install, build, and upload your site
+#        uses: withastro/action@v3
+#        # Pas besoin de config node ou npm supplémentaire, l'action officielle gère tout
+#
+#  deploy:
+#    needs: build
+#    runs-on: ubuntu-latest
+#    environment:
+#      name: github-pages
+#      url: ${{ steps.deployment.outputs.page_url }}
+#    steps:
+#      - name: Deploy to GitHub Pages
+#        id: deployment
+#        uses: actions/deploy-pages@v4
