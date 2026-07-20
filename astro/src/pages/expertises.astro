@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import expertises from '../data/expertises.json';
+
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<Layout title="Nos Expertises - Code with us">
+    <Header />
+
+    <main class="bg-slate-50 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6">
+            <nav class="text-xs font-medium text-slate-400 mb-4">
+                <a href={`${baseUrl}/`} class="hover:text-esn-blue transition">Accueil</a>
+                <span class="mx-2">/</span>
+                <span class="text-slate-600">Expertises</span>
+            </nav>
+
+            <div class="max-w-none">
+                <p class="text-xs font-bold uppercase tracking-wider text-esn-blue mb-2">NOTRE SAVOIR-FAIRE</p>
+                <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
+                    Une exigence technique au service de vos projets
+                </h1>
+                <p class="text-slate-600 text-base leading-relaxed">
+                    Nous croyons en un code propre, testé et évolutif. Découvrez en détail comment nous appliquons nos compétences sur chacun de nos piliers d'intervention.
+                </p>
+            </div>
+        </div>
+
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="space-y-12">
+                {expertises.map((exp) => (
+                        <div
+                                id={exp.id}
+                                class="scroll-mt-24 bg-white rounded-xl p-8 border border-slate-100 shadow-sm grid grid-cols-1 md:grid-cols-12 gap-6 items-start target:ring-2 target:ring-blue-600/20 target:border-blue-500 transition-all duration-300"
+                        >
+
+                            {/* Colonne Gauche : Titre et Technos */}
+                            <div class="md:col-span-4 space-y-3">
+                                <span class="inline-block text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 bg-slate-100 text-esn-blue rounded-md font-mono">
+                                    {exp.id.toUpperCase()}
+                                </span>
+                                <h2 class="text-xl font-bold text-slate-900">
+                                    {exp.title}
+                                </h2>
+                                <p class="text-xs text-slate-400 font-medium font-mono leading-relaxed">
+                                    {exp.techs}
+                                </p>
+                            </div>
+
+                            {/* Colonne Droite : Textes explicatifs générés et Puces */}
+                            <div class="md:col-span-8 text-slate-600 space-y-4 text-sm leading-relaxed border-t md:border-t-0 md:border-l border-slate-100 pt-6 md:pt-0 md:pl-8">
+                                <p class="font-semibold text-slate-800">
+                                    {exp.intro}
+                                </p>
+
+                                {exp.bullets && (
+                                        <ul class="list-disc list-inside space-y-2 text-slate-500 pl-2">
+                                            {exp.bullets.map((bullet) => (
+                                                    <li>{bullet}</li>
+                                            ))}
+                                        </ul>
+                                )}
+                            </div>
+
+                        </div>
+                ))}
+            </div>
+        </section>
+
+        <CtaBanner />
+    </main>
+</Layout>

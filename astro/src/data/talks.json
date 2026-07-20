@@ -1,0 +1,58 @@
+[
+  {
+    "title": "API Security 2026 : Comment éviter de finir sur Have I Been Pwned ?",
+    "event": "Devoxx France 2025",
+    "description": "Ce talk présente les menaces API actuelles et futures (tokens volés, clés exposées, attaques par re-jeu) et détaille les meilleures pratiques 2026 : mise à jour OAuth 2.1, sécurisation JWT, DPoP, mTLS, approche Zero Trust et API gateways, avec démonstration live des risques et conseils concrets pour se protéger.",
+    "youtubeUrl": "https://www.youtube.com/watch?v=wo3_l56LKtI",
+    "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&auto=format&fit=crop&q=60"
+  },
+  {
+    "title": "Rendre son back générique grâce au pattern composite",
+    "event": "Breizhcamp 2025",
+    "description": "Cette conférence vous permettra de découvrir le patron composite dans le contexte du développement back-end en Java. Dans la période actuelle, où il est demandé non seulement de développer des applications, mais parfois des \"plateformes\", utiliser le pattern composite peut être un atout majeur pour rendre vos solutions génériques et évolutives. Vous comprendrez pourquoi et comment le mettre en place, ainsi que les bénéfices de généricité que vous pouvez en tirer. Elle ne se limitera pas uniquement au patron composite, mais abordera également quelques variantes (comme le patron de spécification) et des patrons complémentaires (comme le visiteur). Seulement quelques variantes seront couvertes, car de fil en aiguille, il est possible de conclure qu'un programme informatique, en tant qu'arbre d'instructions, utilise le patron composite.",
+    "youtubeUrl": "https://www.youtube.com/watch?v=9AV-fMVJL2g",
+    "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&auto=format&fit=crop&q=60"
+  },
+  {
+    "title": "L'ensaignement vu par la data \uD83D\uDC89\uD83E\uDE78",
+    "event": "Breizhcamp 2025",
+    "description": "Kibana est l'application compagnon de la stack Elastic, qui permet de visualiser et de mettre en forme vos données grâce, notamment, à des dashboards. Très régulièrement, on me demande un coup de main pour réaliser des choses assez simples dans Kibana, une recherche, une inspection, une visualisation. J'ai souvent la réponse dans ma boîte à outils de trucs et astuces, l'idée est de vous en partager le max. Vous avez envie d'en savoir plus ? Venez je vous explique tout ca en vous montrant des dashboards ca sera plus simple.",
+    "youtubeUrl": "https://www.youtube.com/watch?v=UkF2YTRduxY",
+    "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&auto=format&fit=crop&q=60"
+  },
+  {
+    "title": "\uD83C\uDD98 Mon Elasticsearch a perdu la boule \uD83D\uDE35\u200D\uD83D\uDCAB",
+    "event": "Breizhcamp 2024",
+    "description": "Dans cette présentation, nous soulèverons le capot d’Elasticsearch pour comprendre comment sont réellement exécutées vos requêtes full-text. L’idée est de vous donner tous les trucs et astuces que j’utilise au quotidien pour aider mes clients à comprendre leur soucis de matching et de pertinence dans leurs requêtes. On utilisera intégralement l’API d’Elasticsearch pour aller customiser nos mappings, nos queries, nos algorithmes de scoring pour essayer d’arriver à une solution de search intelligente et efficace",
+    "youtubeUrl": "https://www.youtube.com/watch?v=q1wKJHwW7hA",
+    "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&auto=format&fit=crop&q=60"
+  },
+  {
+    "title": "Redis, le plus sous-estimé des plus utilisés !",
+    "event": "Breizhcamp 2024",
+    "description": "Découvrons ensemble les quinze années d'expérience de Redis, offrant une rétrospective riche en usages variés. Explorez comment tirer le meilleur parti de Redis avec des cas d'utilisation innovants, tout en abordant les défis de sa mise en production. De plus, plongeons dans les récentes évolutions de sa licence et comparons-le à ses alternatives telles que KeyDB, Valkey, Dragonfly et Skytable.",
+    "youtubeUrl": "https://www.youtube.com/watch?v=Jq1li15rzHI",
+    "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&auto=format&fit=crop&q=60"
+  },
+  {
+    "title": "Construire son framework d’entreprise au dessus de Spring Boot",
+    "event": "Breizhcamp 2024",
+    "description": "Les projets se multiplient dans votre entreprise et vous avez du mal à uniformiser vos pratiques et choix techniques ? Dans tous vos projets, vous ré-implémentez votre façon de gérer vos logs, votre observabilité, la configuration de vos plugins maven, votre authentification … avec à chaque fois des subtilités. L’ensemble n’est pas homogène et sa maintenabilité et son suivi de production se compliquent. C’est l’enfer mais vous n’êtes pas les seuls ! Spring boot fut créé pour pallier cette problématique, permettant de faciliter la mise en place de Spring via la gestion centralisée des versions de dépendance, de l'auto-configuration et plus encore. Mais est-ce vraiment suffisant ? Spoiler alert: non ! Il ne peut pas s’adapter ni uniformiser les spécificités techniques de chaque entreprise. Voyons comment nous pouvons construire un framework non intrusif et transparent “on-top of Spring Boot” pour votre entreprise. Deep dive dans les entrailles de Spring Boot et des builds maven au menu !",
+    "youtubeUrl": "https://www.youtube.com/watch?v=3p32NFEq138",
+    "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&auto=format&fit=crop&q=60"
+  },
+  {
+    "title": "Cartographier l'Univers de Star Wars avec Neo4j",
+    "event": "Breizhcamp 2024",
+    "description": "Rejoignez-nous dans une galaxie pas si lointaine au cœur de Neo4j, la base de données graphe qui améliore notre compréhension des constellations de données. Lors de cette conférence, nous tracerons notre route à travers les étoiles en suivant ce plan de vol : Comprendre les concepts fondamentaux qui sous-tendent les bases de données graphes. Apprendre à représenter l'univers Star Wars en termes de systèmes et planètes au sein de Neo4j. Maîtriser le langage de requête Cypher pour interroger et manipuler notre galaxie de données. Découvrir les outils qui facilitent le travail avec Neo4j, permettant de visualiser et d'interagir avec nos données spatiales. Identifier ce qui distingue Neo4j des bases de données traditionnelles et pourquoi elle est idéale pour cartographier des relations complexes. Que la Force des graphes soit avec vous pour explorer les liens cachés entre les systèmes et planètes de notre propre galaxie de données !",
+    "youtubeUrl": "https://www.youtube.com/watch?v=URHbVd8Y4ZY",
+    "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&auto=format&fit=crop&q=60"
+  },
+  {
+    "title": "Elasticsearch data streams, un condensé de bonnes pratiques pour vos données temporelles",
+    "event": "Devoxx France 2024",
+    "description": "Indexer des données dans Elasticsearch est plus facile que jamais grâce aux APIs mises en place par Elastic pour gérer le cycle de vie des données. Les datastreams, introduits dans la version 7.9, centralisent les bonnes pratiques et simplifient l'utilisation de cette fonctionnalité. Découvrez comment les utiliser, notamment dans l'univers Beats.",
+    "youtubeUrl": "https://www.youtube.com/watch?v=THJiQFeNUcU",
+    "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&auto=format&fit=crop&q=60"
+  }
+]

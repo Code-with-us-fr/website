@@ -1,0 +1,55 @@
+---
+// src/components/Hero.astro
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+// Chemin vers l'image dans le dossier public
+const teamImageUrl = `${baseUrl}/images/team.png`;
+---
+
+<section class="relative bg-gradient-to-r from-blue-50/70 via-white to-transparent overflow-hidden pt-16 pb-24 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-12 gap-12 items-center">
+
+        <div class="md:col-span-6 space-y-6 z-10">
+            <p class="text-xs font-bold uppercase tracking-widest text-esn-blue">
+                ESN • CONSEIL • DÉVELOPPEMENT
+            </p>
+
+            <h1 class="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-[1.2] md:leading-[1.15]">
+                Nous développons <br class="hidden lg:inline"/>des logiciels que nous sommes <span class="text-[#1e40af] font-extrabold">fiers de maintenir.</span>
+            </h1>
+
+            <p class="text-slate-600 text-base md:text-lg leading-relaxed max-w-xl">
+                Petite équipe de développeurs seniors, nous accompagnons des organisations ambitieuses dans la conception et la réalisation de logiciels utiles, robustes et évolutifs.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                <a
+                        href="mailto:contact@codewithus.fr"
+                        class="bg-[#1e40af] text-white text-center px-6 py-4 rounded-lg font-semibold hover:bg-esn-blue-dark transition shadow-md"
+                >
+                    Parlons de votre projet
+                </a>
+                <a
+                        href="#approche"
+                        class="flex items-center justify-center gap-2 text-esn-blue-dark font-semibold hover:text-esn-blue transition py-3 group"
+                >
+                    Découvrir notre approche <span class="text-xl group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+            </div>
+        </div>
+
+        {/* Colonne de droite : Image statique depuis le dossier public */}
+        <div class="hidden sm:block md:col-span-6 relative h-[350px] md:h-[450px]">
+            <div class="w-full h-full rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+                <img
+                        src={teamImageUrl}
+                        alt="L'équipe Code with us en pleine session de développement et de conception"
+                        loading="eager"
+                        decoding="async"
+                        class="w-full h-full object-cover transform hover:scale-101 transition duration-500"
+                />
+            </div>
+        </div>
+
+    </div>
+</section>

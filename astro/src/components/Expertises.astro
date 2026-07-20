@@ -1,0 +1,46 @@
+---
+import expertises from '../data/expertises.json';
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<section id="expertises" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 scroll-mt-24">
+    <div class="flex justify-between items-end mb-10">
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Nos expertises</h2>
+        <a
+                href={`${baseUrl}/expertises`}
+                class="flex items-center justify-center gap-2 text-esn-blue-dark text-sm font-semibold hover:text-esn-blue transition py-3 group"
+        >
+            Voir toutes nos expertises <span class="group-hover:translate-x-1 transition-transform">→</span>
+        </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {expertises.map((exp) => (
+                <a
+                        href={`${baseUrl}/expertises#${exp.id}`}
+                        class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between group cursor-pointer"
+                >
+                    <div class="space-y-4">
+                        <div class="text-[#1e40af] bg-slate-50 group-hover:bg-[#1e40af] group-hover:text-white transition-colors duration-200 w-12 h-12 flex items-center justify-center rounded-xl">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d={exp.svgPath}
+                                />
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-xl group-hover:text-esn-blue transition-colors duration-200">
+                            {exp.title}
+                        </h3>
+                    </div>
+                </a>
+        ))}
+    </div>
+
+    <div class="mt-8 text-center sm:hidden">
+        <a href={`${baseUrl}/expertises`} class="inline-flex items-center gap-1 text-sm font-semibold text-esn-blue hover:underline">
+            Voir toutes nos expertises <span>→</span>
+        </a>
+    </div>
+</section>

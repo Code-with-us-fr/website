@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<Layout title="Mentions Légales - Code with us">
+    <Header />
+
+    <main class="bg-slate-50 min-h-screen">
+        <!-- Fil d'Ariane & En-tête -->
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6">
+            <nav class="text-xs font-medium text-slate-400 mb-4">
+                <a href={`${baseUrl}/`} class="hover:text-esn-blue-dark transition">Accueil</a>
+                <span class="mx-2">/</span>
+                <span class="text-slate-600">Mentions légales</span>
+            </nav>
+
+            <h1 class="text-3xl font-bold text-slate-900 tracking-tight mb-2">
+                Mentions légales
+            </h1>
+            <p class="text-slate-500 text-sm">
+                En vigueur et à jour des réglementations.
+            </p>
+        </div>
+
+        <!-- Contenu des mentions -->
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+            <div class="bg-white rounded-xl border border-slate-100 shadow-sm p-6 md:p-10 space-y-8 text-slate-600 text-sm leading-relaxed">
+
+                <!-- Éditeur de la Société -->
+                <section class="space-y-3">
+                    <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                        <span class="text-esn-blue">1.</span> Éditeur du site
+                    </h2>
+                    <div class="pl-5 space-y-1 border-l-2 border-slate-100">
+                        <p class="font-semibold text-slate-800">Code with us</p>
+                        <p>Société par Actions Simplifiée (SAS) au capital de 30 000 €</p>
+                        <p><strong>Siège social :</strong> 4 rue des Genêts, 35650 LE RHEU</p>
+                        <p><strong>R.C.S. Rennes :</strong> 979 895 216</p>
+                        <p><strong>Numéro de TVA intracommunautaire :</strong> FR71979895216</p>
+                        <p><strong>Contact :</strong> <a href="mailto:contact@codewithus.fr" class="text-esn-blue hover:underline">contact@codewithus.fr</a></p>
+                    </div>
+                </section>
+
+                <!-- Direction de la publication -->
+                <section class="space-y-3">
+                    <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                        <span class="text-esn-blue">2.</span> Direction de la publication
+                    </h2>
+                    <div class="pl-5 space-y-1 border-l-2 border-slate-100">
+                        <p><strong>Directeur de la publication :</strong> Alan Menant</p>
+                        <p><strong>Contact :</strong> <a href="mailto:alan.menant@codewithus.fr" class="text-esn-blue hover:underline">alan.menant@codewithus.fr</a></p>
+                    </div>
+                </section>
+
+                <!-- Hébergement -->
+                <section class="space-y-3">
+                    <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                        <span class="text-esn-blue">3.</span> Hébergement
+                    </h2>
+                    <div class="pl-5 space-y-1 border-l-2 border-slate-100">
+                        <p>Ce site internet est hébergé par :</p>
+                        <p class="font-semibold text-slate-800">Github Inc.</p>
+                        <p>88 Colin P Kelly Jr St</p>
+                        <p>San Francisco, California 94107</p>
+                    </div>
+                </section>
+
+                <!-- Propriété intellectuelle -->
+                <section class="space-y-3">
+                    <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                        <span class="text-esn-blue">4.</span> Propriété intellectuelle
+                    </h2>
+                    <div class="pl-5 border-l-2 border-slate-100">
+                        <p>
+                            L'intégralité du site, notamment les textes, photos, logos, éléments graphiques et icônes sont la propriété exclusive de la société <strong>Code with us</strong>. Toute reproduction, représentation, modification ou adaptation totale ou partielle de ces éléments, sans l'accord écrit préalable de l'éditeur, est strictement interdite.
+                        </p>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+</Layout>

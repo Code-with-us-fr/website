@@ -1,0 +1,86 @@
+[
+  {
+    "id": "dev",
+    "title": "Développement (Backend / Frontend)",
+    "svgPath": "M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5",
+    "techs": "Java, Spring, Kotlin, C#, TypeScript, React, Angular, VueJS...",
+    "intro": "Nous concevons des applications Web et Mobiles sur-mesure, robustes, performantes et centrées sur l'expérience utilisateur.",
+    "bullets": [
+      "Développement de backends scalables et d'architectures asynchrones.",
+      "Création d'interfaces frontend modernes, réactives et accessibles.",
+      "Garantie d'une base de code évolutive et hautement maintenable."
+    ]
+  },
+  {
+    "id": "api",
+    "title": "API & Intégrations",
+    "svgPath": "M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244",
+    "techs": "REST, GraphQL, API Platform, Microservices, Event-Driven...",
+    "intro": "Nous construisons des écosystèmes d'API agiles et sécurisés pour interconnecter vos services et fluidifier vos flux de données.",
+    "bullets": [
+      "Conception et modélisation d'API orientées contrat (OpenAPI, GraphQL schema).",
+      "Mise en place de passerelles d'API (API Gateways) et de gestion de trafic.",
+      "Intégration de patterns asynchrones et d'architectures orientées événements."
+    ]
+  },
+  {
+    "id": "arch",
+    "title": "Architecture Logicielle",
+    "svgPath": "M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-.738.09-1.454.257-2.138",
+    "techs": "DDD, Hexagonale, CQRS, Event-driven, Clean Architecture...",
+    "intro": "Nous structurons vos applications en appliquant les meilleurs patterns du marché afin d'assurer l'alignement strict du code avec vos règles métier.",
+    "bullets": [
+      "Maîtrise du Domain-Driven Design (DDD) pour dompter la complexité métier.",
+      "Isolation des dépendances techniques via l'architecture hexagonale / clean.",
+      "Séparation des lectures et écritures (CQRS) pour des performances optimales."
+    ]
+  },
+  {
+    "id": "cloud",
+    "title": "Cloud & DevOps",
+    "svgPath": "M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z",
+    "techs": "AWS, Docker, Kubernetes, GitHub Actions, Terraform...",
+    "intro": "Nous automatisons vos déploiements et orchestrons vos infrastructures Cloud pour garantir une résilience maximale et réduire le Time-to-Market.",
+    "bullets": [
+      "Industrialisation des environnements grâce à l'Infrastructure as Code (IaC).",
+      "Conception de pipelines CI/CD automatisés, fiables et rapides.",
+      "Orchestration et conteneurisation d'applications à haute disponibilité."
+    ]
+  },
+  {
+    "id": "sec",
+    "title": "Sécurité",
+    "svgPath": "M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z",
+    "techs": "APIs, OAuth2, OpenID Connect, JWT, sécurité des APIs...",
+    "intro": "Nous sécurisons vos plateformes et vos échanges de données dès les premières étapes du cycle de développement (approche DevSecOps).",
+    "bullets": [
+      "Mise en place de protocoles d'authentification et d'autorisation robustes.",
+      "Protection avancée des passerelles d'API et sécurisation des tokens (JWT).",
+      "Sensibilisation et intégration des bonnes pratiques de sécurité (OWASP)."
+    ]
+  },
+  {
+    "id": "ia",
+    "title": "IA & Automatisation",
+    "svgPath": "M9.813 15.904L9 21l-.813-5.096L3 15l5.096-.813L9 9l.813 5.187L15 15l-5.187.904zM18 7l-.542 3.458L14 11l3.458.542L18 15l.542-3.458L22 11l-3.458-.542L18 7z",
+    "techs": "Intégration de l'IA au quotidien, LLM, RAG, automatisation, agents...",
+    "intro": "Nous intégrons l'intelligence artificielle de manière pragmatique et concrète pour décupler la productivité de vos équipes et de vos produits.",
+    "bullets": [
+      "Interconnexion et fine-tuning de modèles de langage (LLM) propriétaires ou open-source.",
+      "Implémentation de systèmes de recherche augmentée (RAG) connectés à vos données.",
+      "Création d'agents autonomes et de chaînes d'automatisation intelligentes."
+    ]
+  },
+  {
+    "id": "quality",
+    "title": "Qualité Logicielle",
+    "svgPath": "M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+    "techs": "Tests automatisés, TDD, revue de code, Sonar, métriques...",
+    "intro": "L'excellence technique fait partie de notre ADN. Nous mettons en place les standards les plus exigeants pour éliminer la dette technique.",
+    "bullets": [
+      "Pratique rigoureuse du Test-Driven Development (TDD) et des tests d'intégration.",
+      "Revues de code systématiques et mise en place de barrières qualité (SonarQube).",
+      "Suivi des métriques clés pour pérenniser l'évolutivité de l'application."
+    ]
+  }
+]

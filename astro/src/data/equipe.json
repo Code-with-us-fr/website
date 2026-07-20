@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Alan Menant",
+    "role": "Co-fondateur & Architecte Back-end | Expert Systèmes Distribués | Kotlin, Java, Temporal.io, Cloud Native",
+    "linkedinUrl": "https://www.linkedin.com/in/alanmenant/",
+    "avatar": "images/photos/alan.png"
+  },
+  {
+    "name": "Maxime Odye",
+    "role": "Co-fondateur & Consultant back-end  | Formateur Spring Core & Elastic",
+    "linkedinUrl": "https://www.linkedin.com/in/maxime-odye-81a55215b/",
+    "avatar": "images/photos/maxime.png"
+  },
+  {
+    "name": "Mickaël Barroux",
+    "role": "Co-fondateur & Consultant Senior Fullstack | Tech Lead | Architecture Java/Kotlin | Cloud, APIs & Sécurité | IA appliquée au développement",
+    "linkedinUrl": "https://www.linkedin.com/in/mbarroux/",
+    "avatar": "images/photos/mickael.png"
+  },
+  {
+    "name": "Clément Traon",
+    "role": "Développeur Senior | Java/Kotlin | Spring | Angular",
+    "linkedinUrl": "https://www.linkedin.com/in/cl%C3%A9ment-traon-096930155/",
+    "avatar": "images/photos/clement.png"
+  },
+  {
+    "name": "Alexandre Baron",
+    "role": "Développeur Backend Senior | Tech Lead | Architecture Java/Kotlin | Formateur Spring Core",
+    "linkedinUrl": "https://www.linkedin.com/in/alexandre-baron-44b256156/",
+    "avatar": "images/photos/alexandre.png"
+  },
+  {
+    "name": "Marc Bouteiller",
+    "role": "Développeur Fullstack Senior | Tech Lead Angular/NodeJS | Architecture Java/Kotlin",
+    "linkedinUrl": "https://www.linkedin.com/in/marc-bouteiller/",
+    "avatar": "images/photos/marc.png"
+  },
+  {
+    "name": "Pierre Fervel",
+    "role": "Développeur Fullstack Senior | Tech Lead Angular/NodeJS | Dev Java/.Net/Python",
+    "linkedinUrl": "https://www.linkedin.com/in/pierrefervel/",
+    "avatar": "images/photos/pierre.png"
+  }
+]

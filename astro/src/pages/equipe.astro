@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import equipe from '../data/equipe.json';
+
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<Layout title="L'Équipe - Code with us">
+    <Header />
+
+    <main class="bg-slate-50 min-h-screen">
+        <!-- Fil d'Ariane & En-tête -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6">
+            <nav class="text-xs font-medium text-slate-400 mb-4">
+                <a href={`${baseUrl}/`} class="hover:text-esn-blue transition">Accueil</a>
+                <span class="mx-2">/</span>
+                <span class="text-slate-600">L'équipe</span>
+            </nav>
+
+            <div class="max-w-none">
+                <p class="text-xs font-bold uppercase tracking-wider text-esn-blue mb-2">COLLECTIF & EXIGENCE</p>
+                <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
+                    Les artisans derrière vos projets
+                </h1>
+                <p class="text-slate-600 text-base leading-relaxed">
+                    Une équipe soudée de profils confirmés et seniors, passionnés par la technique et animés par la volonté de concevoir des logiciels de qualité, robustes et faciles à maintenir.
+                </p>
+            </div>
+        </div>
+
+        <!-- Grille des membres entièrement cliquables -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {equipe.map((membre) => (
+                        <div class="bg-white rounded-xl overflow-hidden border border-slate-100 shadow-sm p-6 flex flex-col items-center text-center space-y-4 group hover:shadow-md hover:border-slate-200 transition-all duration-200 relative cursor-pointer">
+
+                            {/* Lien global sur toute la carte vers LinkedIn */}
+                            <a
+                                    href={membre.linkedinUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="absolute inset-0 z-10"
+                                    aria-label={`Voir le profil de ${membre.name}`}
+                            />
+
+                            {/* Avatar circulaire */}
+                            <div class="w-32 h-32 rounded-full overflow-hidden bg-slate-100 ring-4 ring-slate-50 group-hover:ring-blue-50 transition duration-200 shrink-0 relative z-20">
+                                <img
+                                        src={`${baseUrl}/${membre.avatar}`}
+                                        alt={`Photo ${membre.name}`}
+                                        class="w-full h-full object-cover group-hover:scale-103 transition duration-300"
+                                />
+                            </div>
+
+                            {/* Identité */}
+                            <div class="relative z-20">
+                                <h2 class="font-bold text-slate-900 text-lg group-hover:text-[#1e40af] transition-colors duration-150">
+                                    {membre.name}
+                                </h2>
+                                <p class="text-xs text-slate-400 font-medium font-mono mt-1">
+                                    {membre.role}
+                                </p>
+                            </div>
+
+                        </div>
+                ))}
+            </div>
+        </section>
+
+        <!-- Encart Recrutement / Nous Rejoindre -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="bg-white border-2 border-dashed border-slate-200 rounded-2xl p-8 md:p-10 text-center space-y-4 max-w-3xl mx-auto">
+                <div class="text-3xl">🎯</div>
+                <h3 class="text-xl font-bold text-slate-900">Code with us s'agrandit !</h3>
+                <p class="text-sm text-slate-600 leading-relaxed max-w-xl mx-auto">
+                    Envie de travailler dans un environnement stimulant et sur des missions intéressantes ? Code with us, c'est la garantie d’évoluer au sein d'une équipe accessible qui partage votre passion pour le développement. Nous cherchons des développeurs confirmés ou seniors qui aiment le travail bien fait, le code propre et qui ont envie de progresser et de concevoir ensemble des logiciels durables.
+                </p>
+                <div class="pt-2">
+                    <a
+                            href="mailto:contact@codewithus.fr"
+                            class="inline-flex bg-[#1e40af] text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-esn-blue-dark transition shadow-sm"
+                    >
+                        Rejoindre l'aventure
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bannière finale de contact -->
+        <div class="mt-12">
+            <CtaBanner />
+        </div>
+    </main>
+</Layout>

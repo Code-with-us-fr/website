@@ -1,0 +1,41 @@
+---
+import Footer from '../components/Footer.astro';
+
+interface Props {
+    title: string;
+}
+const { title } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth h-full">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href={`${baseUrl}/favicon.svg`} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-['Poppins'] bg-slate-50 text-slate-900 antialiased selection:bg-blue-500 selection:text-white min-h-full flex flex-col">
+<!-- Conteneur principal qui prend tout l'espace disponible -->
+<div class="flex-grow">
+    <slot />
+</div>
+
+<!-- Le footer global maintenant intégré en toute sécurité -->
+<Footer />
+</body>
+</html>
+
+<style is:global>
+    /* Optionnel : Ajuste le comportement du scroll si l'utilisateur a activé
+       les animations réduites dans ses paramètres système (accessibilité) */
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto;
+        }
+    }
+</style>

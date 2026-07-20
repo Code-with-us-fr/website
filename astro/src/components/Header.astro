@@ -1,0 +1,101 @@
+---
+// Récupère la base configurée pour GitHub Pages
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
+// Chemin vers l'image dans le dossier public
+const logoUrl = `${baseUrl}/images/logo-blanc.svg`;
+---
+
+<header class="bg-[#1e40af] border-b border-blue-700 sticky top-0 z-50 shadow-sm transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between relative">
+
+        <!-- 1. ZONE LOGO -->
+        <a href={`${baseUrl}/`} class="flex items-center gap-3 group transition-transform duration-200 shrink-0">
+            <img
+                    src={logoUrl}
+                    alt="Code With Us Logo"
+                    class="w-12 h-12 object-contain"
+            />
+
+            <!-- Texte sur 2 lignes -->
+            <div class="flex flex-col justify-center select-none text-left">
+                <span class="font-black text-xl text-white tracking-wider leading-none">
+                  CODE
+                </span>
+                <span class="font-bold text-xs text-blue-200 tracking-widest -mt-0.5">
+                  WITH US
+                </span>
+            </div>
+        </a>
+
+        <!-- 2. NAVIGATION DESKTOP (Changement de md: à lg:) -->
+        <nav class="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-medium">
+            <a href={`${baseUrl}/#approche`} class="text-blue-100 hover:text-white transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-white hover:after:w-full after:transition-all after:duration-300 whitespace-nowrap">Notre approche</a>
+            <a href={`${baseUrl}/#expertises`} class="text-blue-100 hover:text-white transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-white hover:after:w-full after:transition-all after:duration-300 whitespace-nowrap">Expertises</a>
+            <a href={`${baseUrl}/#realisations`} class="text-blue-100 hover:text-white transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-white hover:after:w-full after:transition-all after:duration-300 whitespace-nowrap">Réalisations</a>
+            <a href={`${baseUrl}/#talks`} class="text-blue-100 hover:text-white transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-white hover:after:w-full after:transition-all after:duration-300 whitespace-nowrap">Talks</a>
+            <a href={`${baseUrl}/equipe`} class="text-blue-100 hover:text-white transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-white hover:after:w-full after:transition-all after:duration-300 whitespace-nowrap">L'équipe</a>
+        </nav>
+
+        <!-- 3. BOUTON CTA DESKTOP (Changement de md: à lg: et ajout de shrink-0) -->
+        <div class="hidden lg:block shrink-0">
+            <a
+                    href={`${baseUrl}/#contact`}
+                    class="bg-white text-[#1e40af] font-semibold text-sm px-4 py-2 rounded-lg hover:bg-blue-50 transition-all duration-200 shadow-sm whitespace-nowrap"
+            >
+                Parlons de votre projet
+            </a>
+        </div>
+
+        <!-- BUTTON MOBILE (Changement de md:hidden à lg:hidden) -->
+        <button id="mobile-menu-btn" class="lg:hidden text-blue-100 hover:text-white focus:outline-none p-2 rounded-lg transition-colors" aria-label="Menu">
+            <!-- Icône Menu Hamburger -->
+            <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <!-- Icône Fermer "X" -->
+            <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+
+        <!-- MENU MOBILE DEROULANT (Changement de md:hidden à lg:hidden) -->
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-16 left-0 right-0 bg-[#1e40af] border-b border-blue-700 px-4 pt-2 pb-6 space-y-1 shadow-xl z-50">
+            <a href={`${baseUrl}/#approche`} class="block text-blue-100 font-medium py-2.5 px-3 rounded-lg hover:bg-blue-800 hover:text-white transition">Notre approche</a>
+            <a href={`${baseUrl}/#expertises`} class="block text-blue-100 font-medium py-2.5 px-3 rounded-lg hover:bg-blue-800 hover:text-white transition">Expertises</a>
+            <a href={`${baseUrl}/#realisations`} class="block text-blue-100 font-medium py-2.5 px-3 rounded-lg hover:bg-blue-800 hover:text-white transition">Réalisations</a>
+            <a href={`${baseUrl}/#talks`} class="block text-blue-100 font-medium py-2.5 px-3 rounded-lg hover:bg-blue-800 hover:text-white transition">Talks</a>
+            <a href={`${baseUrl}/equipe`} class="block text-blue-100 font-medium py-2.5 px-3 rounded-lg hover:bg-blue-800 hover:text-white transition">L'équipe</a>
+
+            <div class="pt-4 px-3">
+                <a href={`${baseUrl}/#contact`} class="block bg-white text-[#1e40af] text-center py-2.5 rounded-lg font-semibold hover:bg-blue-50 transition shadow-md">
+                    Parlons de votre projet
+                </a>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    function toggleMenu() {
+        menu?.classList.toggle('hidden');
+        hamburgerIcon?.classList.toggle('hidden');
+        closeIcon?.classList.toggle('hidden');
+    }
+
+    btn?.addEventListener('click', toggleMenu);
+
+    const links = menu?.querySelectorAll('a');
+    links?.forEach(link => {
+        link.addEventListener('click', () => {
+            menu?.classList.add('hidden');
+            hamburgerIcon?.classList.remove('hidden');
+            closeIcon?.classList.add('hidden');
+        });
+    });
+</script>
