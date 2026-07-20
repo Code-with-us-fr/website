@@ -18,7 +18,10 @@ jobs:
 
       - name: Install, build, and upload your site
         uses: withastro/action@v3
-        # Pas besoin de config node ou npm supplémentaire, l'action officielle gère tout
+        with:
+          path: astro # On pointe vers le sous-dossier contenant ton projet Astro
+          node-version: 22
+          package-manager: npm
 
   deploy:
     needs: build
