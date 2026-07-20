@@ -3,9 +3,8 @@ import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
   integrations: [tailwind()],
-  // Remplacer par vos informations GitHub
-  site: 'https://votre-username.github.io',
-  base: '/website',
+  site: 'https://www.codewithus.fr',
+  base: '/',
   image: {
     domains: ['img.youtube.com'],
   },
